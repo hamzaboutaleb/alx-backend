@@ -1,19 +1,17 @@
 #!/usr/bin/env python3
-
 """Basic Cache"""
 
-BaseCaching = __import__('base_caching').BaseCaching
+from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """Cache"""
+    """cashing system"""
 
     def put(self, key, item):
-        """add new item to cache"""
-
+        """Add an item to the cache"""
         if key is not None and item is not None:
             self.cache_data.update({key: item})
 
     def get(self, key):
-        """get cached item"""
-        return self.cache_data.get(key, None)
+        """Get in item by the key"""
+        return self.cache_data.get(key)
