@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+
 """Basic Cache"""
+
 from base_caching import BaseCaching
 
 
@@ -12,6 +14,6 @@ class BasicCache(BaseCaching):
         if key is not None and item is not None:
             self.cache_data.update({key: item})
 
-    def get(self, item):
+    def get(self, key):
         """get cached item"""
-        return self.cache_data.get(item)
+        return self.cache_data.get(key)
