@@ -2,7 +2,7 @@
 
 """Basic Cache"""
 
-from base_caching import BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
@@ -16,4 +16,4 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """get cached item"""
-        return self.cache_data.get(key)
+        return self.cache_data.get(key, None)
